@@ -1,0 +1,944 @@
+{
+    "appTitle": "prototype",
+    "backgroundMusic": "SuperBackgroundMusicFile",
+    "scenes": [
+        {
+            "sceneId": "TitleScene",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "saturn",
+                    "posX": 0.5,
+                    "posY": 0.5,
+                    "scale": 0.75,
+                    "scaleH": 0.4,
+                    "transformations": [
+                        {
+                            "type": "rotation",
+                            "toValue": 0.5,
+                            "duration": 50
+                        },
+                        {
+                            "type": "scale",
+                            "toValue": 1.25,
+                            "toValueH": 1,
+                            "duration": 50
+                        },
+                    ]
+                },
+                {
+                    "type": "textLabel",
+                    "content": "The",
+                    "posX": 0.5,
+                    "posY": 0.86,
+                    "fontSize": 36,
+                    "fontSizeH": 48
+                },
+                {
+                    "type": "textLabel",
+                    "content": "15",
+                    "posX": 0.5,
+                    "posY": 0.77,
+                    "fontSize": 86,
+                    "fontSizeH": 120,
+                    "posYH": 0.73
+                },
+                {
+                    "type": "textLabel",
+                    "content": "most mind-blowing facts about",
+                    "posX": 0.5,
+                    "posY": 0.75,
+                    "posYH": 0.7,
+                    "fontSize": 24,
+                    "fontSizeH": 42
+                },
+                {
+                    "type": "textLabel",
+                    "content": "THE UNIVERSE",
+                    "posX": 0.5,
+                    "posY": 0.69,
+                    "posYH": 0.55,  
+                    "fontSize": 48,
+                    "fontSizeH": 120
+                }
+            ]},
+            "branches": [
+                {
+                    "label": "Credits",
+                    "target": "credits"
+                },
+                {
+                    "label": "START",
+                    "target": "Slide01"
+                }
+            ],
+            "background": "black",
+            "navigation": "none"
+        },
+        {
+            "sceneId": "Slide01",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "slide01",
+                    "posX": 0.5,
+                    "posY": 0.75,
+                    "posYH": 0.35,
+                    "scale": 0.5,
+                    "scaleH": 0.4,
+                    "transformations": [
+                        {
+                            "type": "rotation",
+                            "toValue": -0.3,
+                            "duration": 50
+                        },
+                        {
+                            "type": "scale",
+                            "toValue": 0.6,
+                            "toValueH": 0.5,
+                            "duration": 50
+                        },
+                    ]
+                },
+                {
+                    "type": "shape",
+                    "posX": 0,
+                    "posY": 0,
+                    "width": 1,
+                    "height": 0.3,
+                    "color": "black"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "The size of our universe",
+                    "posX": 0.5,
+                    "posY": 0.22,
+                    "posYH": 0.2,
+                    "fontSize": 30,
+                    "fontSizeH": 45,
+                    "style": "bold"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "The Universe spans a diameter of over 150 billion light years, and is expanding at an accelerated rate",
+                    "posX": 0.5,
+                    "posY": 0.12,
+                    "posYH": 0.08,
+                    "fontSize": 18,     
+                    "fontSizeH": 40
+                }
+            ]},
+            "background": "black",
+            "navigation": "both"
+        },
+        {
+            "sceneId": "Slide02",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "slide02",
+                    "posX": 0.5,
+                    "posY": 0.5,
+                    "posXH": 0.6,
+                    "posYH": 0,
+                    "scale": 0.4,
+                    "scaleH": 0.3,
+                    "transformations": [
+                        {
+                            "type": "scale",
+                            "toValue": 0.6,
+                            "toValueH": 0.4,
+                            "duration": 50
+                        },
+                    ]
+                },
+                {
+                    "type": "shape",
+                    "posX": 0,
+                    "posY": 0,
+                    "width": 1,
+                    "height": 0.3,
+                    "color": "black"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "Earth is good, but not the best",
+                    "posX": 0.5,
+                    "posY": 0.22,
+                    "posYH": 0.2,
+                    "fontSize": 23,
+                    "fontSizeH": 45,
+                    "style": "bold"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "Among the more than 4000 exoplanets known today, there are 24 superhabitable planets, better than earth ",
+                    "posX": 0.5,
+                    "posY": 0.12,
+                    "posYH": 0.08,
+                    "fontSize": 18,     
+                    "fontSizeH": 40
+                }
+             ]},
+            "background": "black",
+            "navigation": "both"
+        },
+		{ 
+            "sceneId": "Slide03",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "slide03",
+                    "posX": 0.5,
+                    "posY": 0.7,
+                    "scale": 1,
+                    "scaleH": 0.5,
+                    "transformations": [
+                        {
+                            "type": "rotation",
+                            "toValue": 0.5,
+                            "duration": 150
+                        }
+                    ]
+                },
+                {
+                    "type": "shape",
+                    "posX": 0,
+                    "posY": 0,
+                    "width": 1,
+                    "height": 0.3,
+                    "color": "black"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "The great wall on the sky",
+                    "posX": 0.5,
+                    "posY": 0.22,
+                    "posYH": 0.2,
+                    "fontSize": 30,
+                    "fontSizeH": 45,
+                    "style": "bold"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "The biggest supercluster known in the universe is the Hercules-Corona Borealis Great Wall: 10 billion light-years width",
+                    "posX": 0.5,
+                    "posY": 0.12,
+                    "posYH": 0.08,
+                    "fontSize": 18,     
+                    "fontSizeH": 40
+                }
+            ]},
+            "background": "black",
+            "navigation": "both"
+        },
+        {
+            "sceneId": "Slide04",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "slide04",
+                    "posX": 0.5,
+                    "posY": 0.4,
+                    "posYH": 0.3,
+                    "scale": 1,
+                    "scaleH": 0.5,
+                    "transformations": [
+                        {
+                            "type": "rotation",
+                            "toValue": -1.5,
+                            "duration": 150
+                        }
+                    ]
+                },
+                {
+                    "type": "shape",
+                    "posX": 0,
+                    "posY": 0,
+                    "width": 1,
+                    "height": 0.3,
+                    "color": "black"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "Clash of titans",
+                    "posX": 0.5,
+                    "posY": 0.22,
+                    "posYH": 0.2,
+                    "fontSize": 30,
+                    "fontSizeH": 45,
+                    "style": "bold"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "In about 4.5 billion years, our galaxy and Andromeda will collide forming the 'Milkomeda' or 'Milkdromeda' galaxy",
+                    "posX": 0.5,
+                    "posY": 0.12,
+                    "posYH": 0.08,
+                    "fontSize": 18,     
+                    "fontSizeH": 40
+                }
+            ]},
+            "background": "black",
+            "navigation": "both"
+        },
+		{ 
+            "sceneId": "Slide05",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "slide05alt",
+                    "posX": 0.5,
+                    "posY": 0.75,
+                    "scale": 0.5,
+                    "scaleH": 0.3,
+                    "transformations": [
+                        {
+                            "type": "rotation",
+                            "toValue": 0.35,
+                            "duration": 50
+                        },
+                        {
+                            "type": "scale",
+                            "toValue": 0.6,
+                            "duration": 50
+                        },
+                    ]
+                },
+                {
+                    "type": "shape",
+                    "posX": 0,
+                    "posY": 0,
+                    "width": 1,
+                    "height": 0.3,
+                    "color": "black"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "Galaxies has big hearts",
+                    "posX": 0.5,
+                    "posY": 0.22,
+                    "posYH": 0.2,
+                    "fontSize": 30,
+                    "fontSizeH": 45,
+                    "style": "bold"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "There is a supermassive (up to 50 billion times the mass of the Sun) black hole at the heart of every galaxy ",
+                    "posX": 0.5,
+                    "posY": 0.12,
+                    "posYH": 0.08,
+                    "fontSize": 18,     
+                    "fontSizeH": 40
+                }
+            ]},
+            "background": "black",
+            "navigation": "both"
+        },
+        {
+            "sceneId": "Slide06",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "slide06",
+                    "posX": 0.5,
+                    "posY": 0.65,
+                    "posYH": 0.2,
+                    "scale": 0.65,
+                    "transformations": [
+                        {
+                            "type": "rotation",
+                            "toValue": -2,
+                            "duration": 150
+                        }
+                    ]
+                },
+                {
+                    "type": "shape",
+                    "posX": 0,
+                    "posY": 0,
+                    "width": 1,
+                    "height": 0.3,
+                    "color": "black"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "Oh my god, it is full of Earths!",
+                    "posX": 0.5,
+                    "posY": 0.22,
+                    "posYH": 0.2,
+                    "fontSize": 24,
+                    "fontSizeH": 45,
+                    "style": "bold"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "There could be as many as 40 billion Earth-sized planets orbiting in the habitable zones of Sun-like stars in the Milky Way",
+                    "posX": 0.5,
+                    "posY": 0.12,
+                    "posYH": 0.08,
+                    "fontSize": 18,     
+                    "fontSizeH": 40
+                }
+            ]},
+            "background": "black",
+            "navigation": "both"
+        },
+		{
+            "sceneId": "Slide07",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "slide07",
+                    "posX": 0.35,
+                    "posY": 0.35,
+                    "posYH": -0.4,
+                    "scale": 0.65,
+                    "scaleH": 0.4,
+                    "transformations": [
+                        {
+                            "type": "scale",
+                            "toValue": 1,
+                            "toValueH": 0.6,
+                            "duration": 100
+                        },
+                    ]
+                },
+                {
+                    "type": "shape",
+                    "posX": 0,
+                    "posY": 0,
+                    "width": 1,
+                    "height": 0.3,
+                    "color": "black"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "Other [super] earths",
+                    "posX": 0.5,
+                    "posY": 0.22,
+                    "posYH": 0.2,
+                    "fontSize": 30,
+                    "fontSizeH": 45,
+                    "style": "bold"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "A super-Earth is an extrasolar planet with a mass higher than Earth's, also commonly called 'mini-Neptunes'",  
+                    "posX": 0.5,
+                    "posY": 0.12,
+                    "posYH": 0.08,
+                    "fontSize": 18,     
+                    "fontSizeH": 40
+                }
+            ]},
+            "background": "black",
+            "navigation": "both"
+        },
+        {
+            "sceneId": "Slide08",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "slide08",
+                    "posX": 1,
+                    "posXH": 0.7,
+                    "posY": 0.5,
+                    "scale": 0.45,
+                    "scaleH": 0.25,
+                    "transformations": [
+                        {
+                            "type": "rotation",
+                            "toValue": 1.5,
+                            "duration": 150
+                        }
+                    ]
+                },
+                {
+                    "type": "shape",
+                    "posX": 0,
+                    "posY": 0,
+                    "width": 1,
+                    "height": 0.3,
+                    "color": "black"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "Waltz of giants",
+                    "posX": 0.5,
+                    "posY": 0.22,
+                    "posYH": 0.2,
+                    "fontSize": 30,
+                    "fontSizeH": 45,
+                    "style": "bold"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "MAXI J1659-152 is composed of a star and a black hole that orbit each other at the rate of once every 2.4 hours",
+                    "posX": 0.5,
+                    "posY": 0.12,
+                    "posYH": 0.08,
+                    "fontSize": 18,     
+                    "fontSizeH": 40
+                }
+            ]},
+            "background": "black",
+            "navigation": "both"
+        },
+		{
+            "sceneId": "Slide09",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "slide09",
+                    "posX": 0.5,
+                    "posY": 0.5,
+                    "scale": 0.65,
+                    "scaleH": 0.4,
+                    "transformations": [
+                        {
+                            "type": "scale",
+                            "toValue": 1,
+                            "duration": 50
+                        },
+                    ]
+                },
+                {
+                    "type": "shape",
+                    "posX": 0,
+                    "posY": 0,
+                    "width": 1,
+                    "height": 0.3,
+                    "color": "black"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "Hey, Jupiter: you are not alone",
+                    "posX": 0.5,
+                    "posY": 0.22,
+                    "posYH": 0.2,
+                    "fontSize": 24,
+                    "fontSizeH": 45,
+                    "style": "bold"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "There are 79 known moons orbiting Jupiter ",
+                    "posX": 0.5,
+                    "posY": 0.12,
+                    "posYH": 0.08,
+                    "fontSize": 18,     
+                    "fontSizeH": 40
+                }
+            ]},
+            "background": "black",
+            "navigation": "both"
+        },
+        {
+            "sceneId": "Slide10",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "slide10",
+                    "posX": 0.5,
+                    "posY": 0.65,
+                    "posYH": 0.85,
+                    "scale": 1.2,
+                    "scaleH": 0.8,
+                    "transformations": [
+                        {
+                            "type": "rotation",
+                            "toValue": 0.5,
+                            "duration": 50
+                        }
+                    ]
+                },
+                {
+                    "type": "shape",
+                    "posX": 0,
+                    "posY": 0,
+                    "width": 1,
+                    "height": 0.3,
+                    "color": "black"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "A really big hole",
+                    "posX": 0.5,
+                    "posY": 0.22,
+                    "posYH": 0.2,
+                    "fontSize": 30,
+                    "fontSizeH": 45,
+                    "style": "bold"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "The largest known black hole, powering the quasar TON 618, has a mass of 66 billion solar masses ",
+                    "posX": 0.5,
+                    "posY": 0.12,
+                    "posYH": 0.08,
+                    "fontSize": 18,     
+                    "fontSizeH": 40
+                }
+            ]},
+            "background": "black",
+            "navigation": "both"
+        },		
+        {
+            "sceneId": "Slide11",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "slide11",
+                    "posX": 0.5,
+                    "posY": 0.5,
+                    "scale": 0.5,
+                    "scaleH": 0.3,
+                    "transformations": [
+                        {
+                            "type": "scale",
+                            "toValue": 0.7,
+                            "toValueH": 0.5,
+                            "duration": 75
+                        },
+                    ]
+                },
+                {
+                    "type": "shape",
+                    "posX": 0,
+                    "posY": 0,
+                    "width": 1,
+                    "height": 0.3,
+                    "color": "black"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "The dance of the black holes",
+                    "posX": 0.5,
+                    "posY": 0.22,
+                    "posYH": 0.2,
+                    "fontSize": 24,
+                    "fontSizeH": 45,
+                    "style": "bold"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "As the LIGO observatory confirmed in 2016, there are system consisting of two black holes in close orbit around each other",
+                    "posX": 0.5,
+                    "posY": 0.12,
+                    "posYH": 0.08,
+                    "fontSize": 18,     
+                    "fontSizeH": 40
+                }
+            ]},
+            "background": "black",
+            "navigation": "both"
+        },	
+		{
+            "sceneId": "Slide12",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "slide12",
+                    "posX": 0.5,
+                    "posY": 0.35,
+                    "scale": 0.4,
+                    "transformations": [
+                        {
+                            "type": "rotation",
+                            "toValue": -0.5,
+                            "duration": 50
+                        }
+                    ]
+                },
+                {
+                    "type": "shape",
+                    "posX": 0,
+                    "posY": 0,
+                    "width": 1,
+                    "height": 0.3,
+                    "color": "black"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "In space, no one can hear you",
+                    "posX": 0.5,
+                    "posY": 0.22,
+                    "posYH": 0.2,
+                    "fontSize": 24,
+                    "fontSizeH": 45,
+                    "style": "bold"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "As there is no atmosphere in space, it is completely silent",
+                    "posX": 0.5,
+                    "posY": 0.12,
+                    "posYH": 0.08,
+                    "fontSize": 18,     
+                    "fontSizeH": 40
+                }
+            ]},
+            "background": "black",
+            "navigation": "both"
+        },	
+        {
+            "sceneId": "Slide13",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "slide13",
+                    "posX": 0.5,
+                    "posY": 0.5,
+                    "scale": 0.4,
+                    "transformations": [
+                        {
+                            "type": "scale",
+                            "toValue": 0.7,
+                            "duration": 125
+                        },
+                    ]
+                },
+                {
+                    "type": "shape",
+                    "posX": 0,
+                    "posY": 0,
+                    "width": 1,
+                    "height": 0.3,
+                    "color": "black"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "A star is born",
+                    "posX": 0.5,
+                    "posY": 0.22,
+                    "posYH": 0.2,
+                    "fontSize": 30,
+                    "fontSizeH": 45,
+                    "style": "bold"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "Every day, about 275 million stars are created and destroyed throughout the observable universe",
+                    "posX": 0.5,
+                    "posY": 0.12,
+                    "posYH": 0.08,
+                    "fontSize": 18,     
+                    "fontSizeH": 40
+                }
+            ]},
+            "background": "black",
+            "navigation": "both"
+        },	
+		{
+            "sceneId": "Slide14",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "slide14",
+                    "posX": 0.5,
+                    "posY": 0.5,
+                    "scale": 0.75,
+                    "scaleH": 0.4,
+                    "transformations": [
+                        {
+                            "type": "rotation",
+                            "toValue": -0.5,
+                            "duration": 50
+                        }
+                    ]
+                },
+                {
+                    "type": "shape",
+                    "posX": 0,
+                    "posY": 0,
+                    "width": 1,
+                    "height": 0.3,
+                    "color": "black"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "TV Channels tuned to the big bang",
+                    "posX": 0.5,
+                    "posY": 0.22,
+                    "posYH": 0.2,
+                    "fontSize": 22,
+                    "fontSizeH": 45,
+                    "style": "bold"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "The white noise seen in any untuned analog TV allowed the discovery of  Cosmic Microwave Background, remains of the Big Bang",
+                    "posX": 0.5,
+                    "posY": 0.12,
+                    "posYH": 0.08,
+                    "fontSize": 18,     
+                    "fontSizeH": 40
+                }
+            ]},
+            "background": "black",
+            "navigation": "both"
+        },	
+		{
+            "sceneId": "Slide15",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "image",
+                    "imageFile": "slide15",
+                    "posX": 0.5,
+                    "posY": 0.65,
+                    "scale": 0.6,
+                    "scaleH": 0.4,
+                    "transformations": [
+                        {
+                            "type": "scale",
+                            "toValue": 0.9,
+                            "toValueH": 0.6,
+                            "duration": 50
+                        },
+                    ]
+                },
+                {
+                    "type": "shape",
+                    "posX": 0,
+                    "posY": 0,
+                    "width": 1,
+                    "height": 0.3,
+                    "color": "black"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "Neutronic speed",
+                    "posX": 0.5,
+                    "posY": 0.22,
+                    "posYH": 0.2,
+                    "fontSize": 30,
+                    "fontSizeH": 45,
+                    "style": "bold"
+                },
+                {
+                    "type": "textLabel",
+                    "content": "Neutron stars are the fastest spinning objects known in the universe: 70,000 kilometres per second ",
+                    "posX": 0.5,
+                    "posY": 0.12,
+                    "posYH": 0.08,
+                    "fontSize": 18,     
+                    "fontSizeH": 40
+                }
+            ]},
+            "background": "black",
+            "navigation": "both"
+        },			
+        {
+            "sceneId": "credits",
+            "elements": {
+                "elementsArray": [
+                {
+                    "type": "textLabel",
+                    "content": "CREDITS",
+                    "posX": 0.5,
+                    "posY": 0.85,
+                    "fontSize": 28,
+                    "fontSizeH": 56
+                },
+                {
+                    "type": "textLabel",
+                    "content": "Developed by:",
+                    "posX": 0.5,
+                    "posY": 0.75,
+                    "posYH": 0.75,
+                    "fontSize": 20,
+                    "fontSizeH": 30,
+                },
+            {
+                    "type": "textLabel",
+                    "content": "Hyve Innovate Digital SL",
+                    "posX": 0.5,
+                    "posY": 0.71,
+                    "posYH": 0.70,
+                    "fontSize": 24,
+                    "fontSizeH": 36,
+                },
+            {
+                    "type": "textLabel",
+                    "content": "Image credits:",
+                    "posX": 0.5,
+                    "posY": 0.60,
+                    "posYH": 0.55,
+                    "fontSize": 20,
+                    "fontSizeH": 30,
+                },
+             {
+                    "type": "textLabel",
+                    "content": "NASA, Wikimedia Commons",
+                    "posX": 0.5,
+                    "posY": 0.56,
+                    "posYH": 0.5,
+                    "fontSize": 24,
+                    "fontSizeH": 36
+            },
+            {
+                    "type": "textLabel",
+                    "content": "Used under terms of Usage Guidelines and license",
+                    "posX": 0.5,
+                    "posY": 0.53,
+                    "posYH": 0.47,
+                    "fontSize": 16,
+                    "fontSizeH": 24
+            },      
+            {
+                    "type": "textLabel",
+                    "content": "Music:",
+                    "posX": 0.5,
+                    "posY": 0.45,
+                    "posYH": 0.35,
+                    "fontSize": 20,
+                    "fontSizeH": 30
+                },
+             {
+                    "type": "textLabel",
+                    "content": "Jesse Gallagher",
+                    "posX": 0.5,
+                    "posY": 0.41,
+                    "posYH": 0.3,
+                    "fontSize": 24,
+                    "fontSizeH": 36
+                },
+            {
+                    "type": "textLabel",
+                    "content": "Published under YouTube Audio Library license",
+                    "posX": 0.5,
+                    "posY": 0.38,
+                    "posYH": 0.27,
+                    "fontSize": 16,
+                    "fontSizeH": 24
+            }]
+            },
+            "background": "black",
+            "navigation": "back",
+            "branches": [
+                {
+                    "label": "Back",
+                    "target": "TitleScene"
+                }
+            ]
+        }
+    ]
+}
