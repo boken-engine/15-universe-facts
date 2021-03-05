@@ -31,11 +31,11 @@ jobs:
         uses: yukiarrr/ios-build-action@v1.3.3
         with:
           # Base64 encoded p12 key
-          p12-key-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE_KEY }}
+          # p12-key-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE_KEY }}
           # Base64 encoded certificate for the p12 key
-          p12-cer-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE }}
+          # p12-cer-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE }}
           # Base64 encoded p12 file (key + cert)
-          # p12-base64: # optional
+          p12-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE }}
           # Base64 encoded mobileprovision file
           mobileprovision-base64: ${{ secrets.PROVISIONING_PROFILE }}
           # Project path
@@ -45,7 +45,7 @@ jobs:
           # Team id
           team-id: QF53849G49
           # Workspace path
-          workspace-path: 15 Universe Facts.xcodeproj/project.xcworkspace
+          # workspace-path: 15 Universe Facts.xcodeproj/project.xcworkspace
           # Choose app-store, ad-hoc, package, enterprise, development, or developer-id
           export-method: ad-hoc
           # For example, Debug, Release
