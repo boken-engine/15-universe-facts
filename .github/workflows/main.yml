@@ -25,11 +25,40 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - uses: sparkfabrik/ios-build-action@v1.1.0
+      - name: iOS Build Action
+        # You may pin to the exact commit or the version.
+        # uses: yukiarrr/ios-build-action@a2171b1553d281e75edf3a133e52b3935cd2b517
+        uses: yukiarrr/ios-build-action@v1.3.3
         with:
-          project-path: "15 Universe Facts.xcodeproj"
-          p12-key-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE_KEY }}
-          p12-cer-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE }}
+          # Base64 encoded p12 key
+          # p12-key-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE_KEY }}
+          # Base64 encoded certificate for the p12 key
+          # p12-cer-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE }}
+          # Base64 encoded p12 file (key + cert)
+          p12-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE }}
+          # Base64 encoded mobileprovision file
           mobileprovision-base64: ${{ secrets.PROVISIONING_PROFILE }}
+          # Project path
+          project-path: "15 Universe Facts.xcodeproj"
+          # For example, iOS Distribution
           code-signing-identity: "iOS Distribution"
+          # Team id
           team-id: QF53849G49
+          # Workspace path
+          # workspace-path: 15 Universe Facts.xcodeproj/project.xcworkspace
+          # Choose app-store, ad-hoc, package, enterprise, development, or developer-id
+          export-method: app-store
+          # For example, Debug, Release
+          configuration: Release
+          # Certificate password
+          # certificate-password: # optional, default is 
+          # Output path of ipa
+          # output-path: # optional, default is output.ipa
+          # Scheme
+          # scheme: # optional, default is 
+          # Targets to be updated with mobileprovision, code signing identity, etc
+          # update-targets: # optional, default is 
+          # Deprecated, use update-targets instead
+          # disable-targets: # optional, default is 
+          # Path to an export options plist
+          # export-options: # optional, default is 
