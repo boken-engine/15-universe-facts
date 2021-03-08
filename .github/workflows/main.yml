@@ -31,11 +31,11 @@ jobs:
         uses: yukiarrr/ios-build-action@v1.3.3
         with:
           # Base64 encoded p12 key
-          p12-key-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE_KEY }}
+          # p12-key-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE_KEY }}
           # Base64 encoded certificate for the p12 key
-          p12-cer-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE }}
+          # p12-cer-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE }}
           # Base64 encoded p12 file (key + cert)
-          # p12-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE }}
+          p12-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE }}
           # Base64 encoded mobileprovision file
           mobileprovision-base64: ${{ secrets.PROVISIONING_PROFILE }}
           # Project path
@@ -51,7 +51,7 @@ jobs:
           # For example, Debug, Release
           configuration: Release
           # Certificate password
-          # certificate-password: # optional, default is 
+          certificate-password: ${{ secrets.CERTIFICATE_PASS }}
           # Output path of ipa
           # output-path: # optional, default is output.ipa
           # Scheme
