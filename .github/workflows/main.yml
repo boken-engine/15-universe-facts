@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -47,11 +47,11 @@ jobs:
           # Workspace path
           # workspace-path: 15 Universe Facts.xcodeproj/project.xcworkspace
           # Choose app-store, ad-hoc, package, enterprise, development, or developer-id
-          export-method: app-store
+          export-method: ad-hoc
           # For example, Debug, Release
           configuration: Release
           # Certificate password
-          # certificate-password: # optional, default is 
+          certificate-password: ${{ secrets.CERTIFICATE_PASS }}
           # Output path of ipa
           # output-path: # optional, default is output.ipa
           # Scheme
