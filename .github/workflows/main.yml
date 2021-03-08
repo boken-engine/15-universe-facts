@@ -41,7 +41,7 @@ jobs:
           # Project path
           project-path: "15 Universe Facts.xcodeproj"
           # For example, iOS Distribution
-          code-signing-identity: "iOS Distribution"
+          code-signing-identity: "iPhone Distribution"
           # Team id
           team-id: QF53849G49
           # Workspace path
