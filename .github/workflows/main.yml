@@ -35,7 +35,7 @@ jobs:
           # Base64 encoded certificate for the p12 key
           p12-cer-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE }}
           # Base64 encoded p12 file (key + cert)
-          p12-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE }}
+          #p12-base64: ${{ secrets.DISTRIBUTION_CERTIFICATE }}
           # Base64 encoded mobileprovision file
           mobileprovision-base64: ${{ secrets.PROVISIONING_PROFILE }}
           # Project path
