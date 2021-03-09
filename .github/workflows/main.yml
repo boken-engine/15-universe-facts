@@ -24,6 +24,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: Resolve dependencies with Carthage
+        run: carthage update --cache-builds --use-xcframeworks  --platform iOS
 
       - name: iOS Build Action
         # You may pin to the exact commit or the version.
@@ -41,11 +44,11 @@ jobs:
           # Project path
           project-path: "15 Universe Facts.xcodeproj"
           # For example, iOS Distribution
-          code-signing-identity: "iOS Distribution"
+          code-signing-identity: "iPhone Distribution"
           # Team id
           team-id: QF53849G49
           # Workspace path
-          # workspace-path: 15 Universe Facts.xcodeproj/project.xcworkspace
+          workspace-path: "15 Universe Facts.xcodeproj/project.xcworkspace"
           # Choose app-store, ad-hoc, package, enterprise, development, or developer-id
           export-method: ad-hoc
           # For example, Debug, Release
