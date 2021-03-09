@@ -11,10 +11,27 @@
 		5D6A4D9225EE74EF0045DAFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6A4D9125EE74EF0045DAFF /* ViewController.swift */; };
 		5D6A4D9525EE74EF0045DAFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A4D9325EE74EF0045DAFF /* Main.storyboard */; };
 		5D6A4D9A25EE74F10045DAFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A4D9825EE74F10045DAFF /* LaunchScreen.storyboard */; };
-		5D6A4DA325EE76500045DAFF /* BokenEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6A4DA225EE76500045DAFF /* BokenEngine.framework */; };
 		5D6A4DA525EE77880045DAFF /* StoryDescription.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A4DA425EE77880045DAFF /* StoryDescription.json */; };
 		5D6A4DA825EE7AE60045DAFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A4DA725EE7AE60045DAFF /* Assets.xcassets */; };
+		5D874E7725F7D50C0081BE98 /* BokenEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6A4DA225EE76500045DAFF /* BokenEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D874E7825F7D51A0081BE98 /* BokenEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6A4DA225EE76500045DAFF /* BokenEngine.framework */; };
+		5D874E7925F7D51A0081BE98 /* BokenEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6A4DA225EE76500045DAFF /* BokenEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5D874E7625F7D50C0081BE98 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5D874E7925F7D51A0081BE98 /* BokenEngine.framework in Embed Frameworks */,
+				5D874E7725F7D50C0081BE98 /* BokenEngine.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5D6A4D8C25EE74EF0045DAFF /* 15 Universe Facts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "15 Universe Facts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D6A4DA325EE76500045DAFF /* BokenEngine.framework in Frameworks */,
+				5D874E7825F7D51A0081BE98 /* BokenEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +107,7 @@
 				5D6A4D8925EE74EF0045DAFF /* Frameworks */,
 				5D6A4D8A25EE74EF0045DAFF /* Resources */,
 				5D6A4DA625EE78520045DAFF /* ShellScript */,
+				5D874E7625F7D50C0081BE98 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
