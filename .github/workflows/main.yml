@@ -42,7 +42,7 @@ jobs:
           # Base64 encoded mobileprovision file
           mobileprovision-base64: ${{ secrets.PROVISIONING_PROFILE }}
           # Project path
-          # project-path: "15 Universe Facts.xcodeproj"
+          project-path: "15 Universe Facts.xcodeproj"
           # For example, iOS Distribution
           code-signing-identity: "iPhone Distribution"
           # Team id
