@@ -343,6 +343,7 @@
 				DEVELOPMENT_TEAM = QF53849G49;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "15 Universe Facts/Info.plist";
@@ -368,6 +369,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/",
 				);
 				INFOPLIST_FILE = "15 Universe Facts/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
