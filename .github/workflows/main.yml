@@ -48,7 +48,7 @@ jobs:
           # Team id
           team-id: QF53849G49
           # Workspace path
-          workspace-path: "15 Universe Facts.xcodeproj/project.xcworkspace"
+          workspace-path: "15 Universe Facts.xcodeproj/15-universe-facts.xcworkspace"
           # Choose app-store, ad-hoc, package, enterprise, development, or developer-id
           export-method: ad-hoc
           # For example, Debug, Release
