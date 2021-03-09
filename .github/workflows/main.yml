@@ -28,7 +28,9 @@ jobs:
       - name: Resolve dependencies with Carthage
         run: |
           carthage update --cache-builds --use-xcframeworks  --platform iOS
-          ls -l Carthage/Build/iOS          
+          ls -l Carthage
+          ls -l Carthage/Build
+          ls -l Carthage/Build/iOS     
 
       - name: iOS Build Action
         # You may pin to the exact commit or the version.
