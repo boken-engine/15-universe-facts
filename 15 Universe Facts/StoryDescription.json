@@ -1,6 +1,6 @@
 {
-    "appTitle": "prototype",
-    "backgroundMusic": "SuperBackgroundMusicFile",
+    "appTitle": "15 Universe Facts",
+    "backgroundMusic": "backmusic",
     "scenes": [
         {
             "sceneId": "TitleScene",
