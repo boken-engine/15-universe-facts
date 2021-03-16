@@ -22,13 +22,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      
-      - name: Resolve dependencies with Carthage
-        run: |
-          carthage update --cache-builds --use-xcframeworks  --platform iOS   
 
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set XCode version
+        run: sudo xcode-select -s /Applications/Xcode_10.3.app/Contents/Developer
+      - name: Resolve dependencies with Carthage
+        run: carthage update 
       - name: iOS Build Action
         # You may pin to the exact commit or the version.
         # uses: yukiarrr/ios-build-action@a2171b1553d281e75edf3a133e52b3935cd2b517
