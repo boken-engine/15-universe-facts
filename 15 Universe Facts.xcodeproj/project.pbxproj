@@ -3,30 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5D63A5042600CC6500BC67F4 /* StoryDescription.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D63A5032600CC6500BC67F4 /* StoryDescription.json */; };
+		5D63A50D26023DBB00BC67F4 /* BokenEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D63A50C26023DBB00BC67F4 /* BokenEngine.framework */; };
 		5D6A4D9025EE74EF0045DAFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6A4D8F25EE74EF0045DAFF /* AppDelegate.swift */; };
 		5D6A4D9225EE74EF0045DAFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6A4D9125EE74EF0045DAFF /* ViewController.swift */; };
 		5D6A4D9525EE74EF0045DAFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A4D9325EE74EF0045DAFF /* Main.storyboard */; };
 		5D6A4D9A25EE74F10045DAFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A4D9825EE74F10045DAFF /* LaunchScreen.storyboard */; };
 		5D6A4DA825EE7AE60045DAFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A4DA725EE7AE60045DAFF /* Assets.xcassets */; };
-		5D874E7725F7D50C0081BE98 /* BokenEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6A4DA225EE76500045DAFF /* BokenEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5D874E7825F7D51A0081BE98 /* BokenEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6A4DA225EE76500045DAFF /* BokenEngine.framework */; };
-		5D874E7925F7D51A0081BE98 /* BokenEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6A4DA225EE76500045DAFF /* BokenEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5D874E7625F7D50C0081BE98 /* Embed Frameworks */ = {
+		5D63A5072602372500BC67F4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5D874E7925F7D51A0081BE98 /* BokenEngine.framework in Embed Frameworks */,
-				5D874E7725F7D50C0081BE98 /* BokenEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,13 +31,13 @@
 
 /* Begin PBXFileReference section */
 		5D63A5032600CC6500BC67F4 /* StoryDescription.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StoryDescription.json; sourceTree = "<group>"; };
+		5D63A50C26023DBB00BC67F4 /* BokenEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BokenEngine.framework; path = Carthage/Build/iOS/BokenEngine.framework; sourceTree = "<group>"; };
 		5D6A4D8C25EE74EF0045DAFF /* 15 Universe Facts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "15 Universe Facts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D6A4D8F25EE74EF0045DAFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D6A4D9125EE74EF0045DAFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D6A4D9425EE74EF0045DAFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D6A4D9925EE74F10045DAFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D6A4D9B25EE74F10045DAFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D6A4DA225EE76500045DAFF /* BokenEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BokenEngine.framework; path = Carthage/Build/iOS/BokenEngine.framework; sourceTree = "<group>"; };
 		5D6A4DA725EE7AE60045DAFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D874E7825F7D51A0081BE98 /* BokenEngine.framework in Frameworks */,
+				5D63A50D26023DBB00BC67F4 /* BokenEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +87,7 @@
 		5D6A4DA125EE76500045DAFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5D6A4DA225EE76500045DAFF /* BokenEngine.framework */,
+				5D63A50C26023DBB00BC67F4 /* BokenEngine.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,7 +103,7 @@
 				5D6A4D8925EE74EF0045DAFF /* Frameworks */,
 				5D6A4D8A25EE74EF0045DAFF /* Resources */,
 				5D6A4DA625EE78520045DAFF /* Run Script */,
-				5D874E7625F7D50C0081BE98 /* Embed Frameworks */,
+				5D63A5072602372500BC67F4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,18 +168,19 @@
 			files = (
 			);
 			inputFileListPaths = (
+				"$(SRCROOT)/input.xcfilelist",
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/BokenEngine.framework",
 			);
 			name = "Run Script";
 			outputFileListPaths = (
+				"$(SRCROOT)/output.xcfilelist",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncarthage copy-frameworks\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -339,8 +336,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF53849G49;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -354,7 +351,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hyve.15-universe-facts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "15-universe-facts-profile";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,8 +362,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF53849G49;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -379,7 +377,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hyve.15-universe-facts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "15-universe-facts-profile";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
