@@ -17,18 +17,12 @@ jobs:
         run: sudo xcode-select -s /Applications/Xcode_10.3.app/Contents/Developer
       - name: Resolve dependencies with Carthage
         run: carthage update 
-      - name: Set Default Scheme
+      - name: Build to Archive
         run: |
-          scheme_list=$(xcodebuild -list -json | tr -d "\n")
-          default=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['targets'][0]")
-          echo $default | cat >default
-          echo Using default scheme: $default
-      - name: Build
-        env:
-          scheme: ${{ 'default' }}
-          platform: ${{ 'iOS Simulator' }}
+          mkdir output
+          xcodebuild build -scheme "15 Universe Facts" -workspace "15 Universe Facts.xcodeproj/15-universe-facts.xcworkspace" -archivePath output/15-universe-facts.xcarchive archive
+      - name: Export IPA
         run: |
-          ls -l -R Carthage
-          device=`instruments -s -devices | grep -oE 'iPhone.*?[^\(]+' | head -1 | awk '{$1=$1;print}'`
-          if [ $scheme = default ]; then scheme=$(cat default); fi
-          xcodebuild build -scheme "$scheme" -workspace "15 Universe Facts.xcodeproj/15-universe-facts.xcworkspace" -destination "platform=$platform,name=$device"
+          mkdir output
+          xcodebuild -exportArchive -archivePath output/15-universe-facts.xcarchive/ -exportPath ./output -exportOptionsPlist exportOptions.plist -allowProvisioningUpdates
+
