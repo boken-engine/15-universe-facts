@@ -32,7 +32,7 @@ jobs:
       - name: Build to Archive
         run: |
           mkdir output
-          xcodebuild build -scheme "15 Universe Facts" -workspace "15 Universe Facts.xcodeproj/15-universe-facts.xcworkspace" -archivePath output/15-universe-facts.xcarchive archive
+          xcodebuild build -scheme "15 Universe Facts" -workspace "15 Universe Facts.xcodeproj/15-universe-facts.xcworkspace"  -allowProvisioningUpdates -archivePath output/15-universe-facts.xcarchive archive
       - name: Export IPA
         run: |
           mkdir output
