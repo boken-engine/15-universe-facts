@@ -19,8 +19,8 @@ jobs:
         run: carthage update 
       - name: Setup provisioning profile and certificate
         run: |
-          echo -n ${{ secrets.DISTRIBUTION_CERTIFICATE }} | base64 --decode --output certificate.p12
-          echo -n ${{ secrets.PROVISIONING_PROFILE }} | base64 --decode --output profile.mobileprovision
+          echo -n "${{ secrets.DISTRIBUTION_CERTIFICATE }}" | base64 --decode --output certificate.p12
+          echo -n "${{ secrets.PROVISIONING_PROFILE }}" | base64 --decode --output profile.mobileprovision
           KEYCHAIN_PATH=$RUNNER_TEMP/15factskeychain
           security create-keychain -p ${{ secrets.KEYCHAIN_PASS }} $KEYCHAIN_PATH
           security set-keychain-settings -lut 21600 $KEYCHAIN_PATH
