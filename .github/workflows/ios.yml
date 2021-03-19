@@ -36,7 +36,7 @@ jobs:
           ls -la "$HOME/Library/MobileDevice/Provisioning Profiles/"
       - name: Build to Archive
         run: |
-          mkdir output
+          mkdir output 
           xcodebuild build -configuration release -scheme "15 Universe Facts"  -workspace "15 Universe Facts.xcodeproj/15-universe-facts.xcworkspace"  -allowProvisioningUpdates -archivePath output/15-universe-facts.xcarchive archive
       - name: Export IPA
         run: |
