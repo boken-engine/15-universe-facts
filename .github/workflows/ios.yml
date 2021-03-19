@@ -26,7 +26,7 @@ jobs:
           security list-keychain -d user -s $KEYCHAIN_PATH
       - name: Set up provisioning
         run: |          
-          echo -n "${{ secrets.PROVISIONING_PROFILE_ALT }}" | base64 --decode --output profile.mobileprovision
+          echo -n "${{ secrets.PROVISIONING_PROFILE }}" | base64 --decode --output profile.mobileprovision
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           for PROVISION in `ls ./*.mobileprovision`
           do
