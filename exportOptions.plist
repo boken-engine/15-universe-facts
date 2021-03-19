@@ -9,7 +9,7 @@
  <key>provisioningProfiles</key>
  <dict>
   <key>com.hyve.15-universe-facts</key>
-  <string>Distribution</string>
+  <string>15-universe-facts-profile</string>
  </dict>
  <key>signingCertificate</key>
  <string>iOS Distribution</string>
