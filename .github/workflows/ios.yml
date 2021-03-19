@@ -20,7 +20,7 @@ jobs:
       - name: Setup provisioning profile and certificate
         run: |
           echo -n "${{ secrets.DISTRIBUTION_CERTIFICATE }}" | base64 --decode --output certificate.p12
-          echo -n "${{ secrets.PROVISIONING_PROFILE }}" | base64 --decode --output {{ secrets.PROVISION_FILE_NAME }}
+          echo -n "${{ secrets.PROVISIONING_PROFILE }}" | base64 --decode --output ${{ secrets.PROVISION_FILE_NAME }}
           KEYCHAIN_PATH=$RUNNER_TEMP/15factskeychain
           security create-keychain -p ${{ secrets.KEYCHAIN_PASS }} $KEYCHAIN_PATH
           security set-keychain-settings -lut 21600 $KEYCHAIN_PATH
@@ -28,7 +28,7 @@ jobs:
           security import certificate.p12 -P ${{ secrets.CERTIFICATE_PASS }} -A -t cert -f pkcs12 -k $KEYCHAIN_PATH
           security list-keychain -d user -s $KEYCHAIN_PATH
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-          cp {{ secrets.PROVISION_FILE_NAME }} ~/Library/MobileDevice/Provisioning\ Profiles        
+          cp ${{ secrets.PROVISION_FILE_NAME }} ~/Library/MobileDevice/Provisioning\ Profiles        
       - name: Build to Archive
         run: |
           mkdir output
