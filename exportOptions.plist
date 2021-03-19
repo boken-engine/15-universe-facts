@@ -14,5 +14,7 @@
 	<string>QF53849G49</string>
 	<key>thinning</key>
 	<string>&lt;none&gt;</string>	
+	<key>signingCertificate</key>
+	<string>iPhone Distribution</string>
 </dict>
 </plist>
