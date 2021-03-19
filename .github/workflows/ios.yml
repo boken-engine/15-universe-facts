@@ -29,6 +29,7 @@ jobs:
           security list-keychain -d user -s $KEYCHAIN_PATH
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp ${{ secrets.PROVISION_FILE_NAME }} ~/Library/MobileDevice/Provisioning\ Profiles        
+          ls ~/Library/MobileDevice/Provisioning\ Profiles        
       - name: Build to Archive
         run: |
           mkdir output
