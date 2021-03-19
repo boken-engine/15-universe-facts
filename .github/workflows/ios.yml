@@ -33,6 +33,7 @@ jobs:
             UUID=`/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< $(security cms -D -i ./$PROVISION)`
             cp "./$PROVISION" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision"
           done
+          ls -la "$HOME/Library/MobileDevice/Provisioning Profiles/"
       - name: Build to Archive
         run: |
           mkdir output
