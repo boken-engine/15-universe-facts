@@ -17,19 +17,24 @@ jobs:
         run: sudo xcode-select -s /Applications/Xcode_10.3.app/Contents/Developer
       - name: Resolve dependencies with Carthage
         run: carthage update 
-      - name: Setup provisioning profile and certificate
+      - name: Set up certificate
         run: |
           echo -n "${{ secrets.DISTRIBUTION_CERTIFICATE }}" | base64 --decode --output certificate.p12
-          echo -n "${{ secrets.PROVISIONING_PROFILE }}" | base64 --decode --output ${{ secrets.PROVISION_FILE_NAME }}
           KEYCHAIN_PATH=$RUNNER_TEMP/15factskeychain
           security create-keychain -p ${{ secrets.KEYCHAIN_PASS }} $KEYCHAIN_PATH
           security set-keychain-settings -lut 21600 $KEYCHAIN_PATH
           security unlock-keychain -p ${{ secrets.KEYCHAIN_PASS }} $KEYCHAIN_PATH
           security import certificate.p12 -P ${{ secrets.CERTIFICATE_PASS }} -A -t cert -f pkcs12 -k $KEYCHAIN_PATH
           security list-keychain -d user -s $KEYCHAIN_PATH
+      - name: Set up provisioning
+        run: |          
+          echo -n "${{ secrets.PROVISIONING_PROFILE }}" | base64 --decode --output profile.mobileprovision
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-          cp ${{ secrets.PROVISION_FILE_NAME }} ~/Library/MobileDevice/Provisioning\ Profiles        
-          ls ~/Library/MobileDevice/Provisioning\ Profiles        
+          for PROVISION in `ls ./*.mobileprovision`
+          do
+            UUID=`/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< $(security cms -D -i ./$PROVISION)`
+            cp "./$PROVISION" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision"
+          done
       - name: Build to Archive
         run: |
           mkdir output
