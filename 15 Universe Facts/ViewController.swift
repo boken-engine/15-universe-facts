@@ -13,11 +13,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let sceneManager = try! SceneManager()
-        sceneManager.setRootView(self.view)
-        try! sceneManager.loadTitleScene()
+        do {
+            let sceneManager = try SceneManager()
+            sceneManager.setRootView(self.view)
+            try sceneManager.loadTitleScene()
+        } catch {
+            print("Error initializing application: "+error.localizedDescription)
+        }
     }
-
-
 }
-
