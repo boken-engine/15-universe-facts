@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D43676726130A25001317F0 /* _5_Universe_Facts_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D43676626130A25001317F0 /* _5_Universe_Facts_Tests.swift */; };
+		5D436770261310C2001317F0 /* StoryDescription.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D63A5032600CC6500BC67F4 /* StoryDescription.json */; };
+		5D43677426131914001317F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D43677326131914001317F0 /* Assets.xcassets */; };
 		5D63A5042600CC6500BC67F4 /* StoryDescription.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D63A5032600CC6500BC67F4 /* StoryDescription.json */; };
 		5D63A50D26023DBB00BC67F4 /* BokenEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D63A50C26023DBB00BC67F4 /* BokenEngine.framework */; };
 		5D6A4D9025EE74EF0045DAFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6A4D8F25EE74EF0045DAFF /* AppDelegate.swift */; };
 		5D6A4D9225EE74EF0045DAFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6A4D9125EE74EF0045DAFF /* ViewController.swift */; };
 		5D6A4D9525EE74EF0045DAFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A4D9325EE74EF0045DAFF /* Main.storyboard */; };
 		5D6A4D9A25EE74F10045DAFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A4D9825EE74F10045DAFF /* LaunchScreen.storyboard */; };
-		5D6A4DA825EE7AE60045DAFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A4DA725EE7AE60045DAFF /* Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D43676926130A25001317F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D6A4D8425EE74EF0045DAFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D6A4D8B25EE74EF0045DAFF;
+			remoteInfo = "15 Universe Facts";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		5D63A5072602372500BC67F4 /* Embed Frameworks */ = {
@@ -30,6 +42,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5D43676426130A25001317F0 /* 15 Universe Facts Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "15 Universe Facts Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D43676626130A25001317F0 /* _5_Universe_Facts_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _5_Universe_Facts_Tests.swift; sourceTree = "<group>"; };
+		5D43676826130A25001317F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D43676F26130DCE001317F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "15 Universe Facts Tests/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
+		5D43677326131914001317F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D63A5032600CC6500BC67F4 /* StoryDescription.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StoryDescription.json; sourceTree = "<group>"; };
 		5D63A50C26023DBB00BC67F4 /* BokenEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BokenEngine.framework; path = Carthage/Build/iOS/BokenEngine.framework; sourceTree = "<group>"; };
 		5D6A4D8C25EE74EF0045DAFF /* 15 Universe Facts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "15 Universe Facts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,10 +55,16 @@
 		5D6A4D9425EE74EF0045DAFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D6A4D9925EE74F10045DAFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D6A4D9B25EE74F10045DAFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D6A4DA725EE7AE60045DAFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5D43676126130A25001317F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5D6A4D8925EE74EF0045DAFF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,10 +76,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D43676526130A25001317F0 /* 15 Universe Facts Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5D43676626130A25001317F0 /* _5_Universe_Facts_Tests.swift */,
+				5D43676826130A25001317F0 /* Info.plist */,
+			);
+			path = "15 Universe Facts Tests";
+			sourceTree = "<group>";
+		};
 		5D6A4D8325EE74EF0045DAFF = {
 			isa = PBXGroup;
 			children = (
 				5D6A4D8E25EE74EF0045DAFF /* 15 Universe Facts */,
+				5D43676526130A25001317F0 /* 15 Universe Facts Tests */,
 				5D6A4D8D25EE74EF0045DAFF /* Products */,
 				5D6A4DA125EE76500045DAFF /* Frameworks */,
 			);
@@ -66,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				5D6A4D8C25EE74EF0045DAFF /* 15 Universe Facts.app */,
+				5D43676426130A25001317F0 /* 15 Universe Facts Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,8 +110,9 @@
 				5D6A4D8F25EE74EF0045DAFF /* AppDelegate.swift */,
 				5D6A4D9125EE74EF0045DAFF /* ViewController.swift */,
 				5D6A4D9325EE74EF0045DAFF /* Main.storyboard */,
-				5D6A4DA725EE7AE60045DAFF /* Assets.xcassets */,
+				5D43676F26130DCE001317F0 /* Assets.xcassets */,
 				5D63A5032600CC6500BC67F4 /* StoryDescription.json */,
+				5D43677326131914001317F0 /* Assets.xcassets */,
 				5D6A4D9825EE74F10045DAFF /* LaunchScreen.storyboard */,
 				5D6A4D9B25EE74F10045DAFF /* Info.plist */,
 			);
@@ -95,6 +130,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5D43676326130A25001317F0 /* 15 Universe Facts Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D43676D26130A25001317F0 /* Build configuration list for PBXNativeTarget "15 Universe Facts Tests" */;
+			buildPhases = (
+				5D43676026130A25001317F0 /* Sources */,
+				5D43676126130A25001317F0 /* Frameworks */,
+				5D43676226130A25001317F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D43676A26130A25001317F0 /* PBXTargetDependency */,
+			);
+			name = "15 Universe Facts Tests";
+			productName = "15 Universe Facts Tests";
+			productReference = 5D43676426130A25001317F0 /* 15 Universe Facts Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5D6A4D8B25EE74EF0045DAFF /* 15 Universe Facts */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D6A4D9E25EE74F10045DAFF /* Build configuration list for PBXNativeTarget "15 Universe Facts" */;
@@ -124,6 +177,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Hyve;
 				TargetAttributes = {
+					5D43676326130A25001317F0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					5D6A4D8B25EE74EF0045DAFF = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -143,18 +199,27 @@
 			projectRoot = "";
 			targets = (
 				5D6A4D8B25EE74EF0045DAFF /* 15 Universe Facts */,
+				5D43676326130A25001317F0 /* 15 Universe Facts Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5D43676226130A25001317F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D436770261310C2001317F0 /* StoryDescription.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5D6A4D8A25EE74EF0045DAFF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5D6A4D9A25EE74F10045DAFF /* LaunchScreen.storyboard in Resources */,
-				5D6A4DA825EE7AE60045DAFF /* Assets.xcassets in Resources */,
 				5D63A5042600CC6500BC67F4 /* StoryDescription.json in Resources */,
+				5D43677426131914001317F0 /* Assets.xcassets in Resources */,
 				5D6A4D9525EE74EF0045DAFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +250,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5D43676026130A25001317F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D43676726130A25001317F0 /* _5_Universe_Facts_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5D6A4D8825EE74EF0045DAFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,6 +268,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D43676A26130A25001317F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D6A4D8B25EE74EF0045DAFF /* 15 Universe Facts */;
+			targetProxy = 5D43676926130A25001317F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5D6A4D9325EE74EF0045DAFF /* Main.storyboard */ = {
@@ -216,6 +297,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5D43676B26130A25001317F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QF53849G49;
+				INFOPLIST_FILE = "15 Universe Facts Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hyve.-5-Universe-Facts-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5D43676C26130A25001317F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QF53849G49;
+				INFOPLIST_FILE = "15 Universe Facts Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hyve.-5-Universe-Facts-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		5D6A4D9C25EE74F10045DAFF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -387,6 +504,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5D43676D26130A25001317F0 /* Build configuration list for PBXNativeTarget "15 Universe Facts Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D43676B26130A25001317F0 /* Debug */,
+				5D43676C26130A25001317F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5D6A4D8725EE74EF0045DAFF /* Build configuration list for PBXProject "15 Universe Facts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
