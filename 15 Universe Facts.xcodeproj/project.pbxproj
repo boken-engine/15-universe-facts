@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D43676726130A25001317F0 /* _5_Universe_Facts_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D43676626130A25001317F0 /* _5_Universe_Facts_Tests.swift */; };
+		5D43676726130A25001317F0 /* UniverseFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D43676626130A25001317F0 /* UniverseFactsTests.swift */; };
 		5D436770261310C2001317F0 /* StoryDescription.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D63A5032600CC6500BC67F4 /* StoryDescription.json */; };
 		5D43677426131914001317F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D43677326131914001317F0 /* Assets.xcassets */; };
 		5D63A5042600CC6500BC67F4 /* StoryDescription.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D63A5032600CC6500BC67F4 /* StoryDescription.json */; };
@@ -43,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		5D43676426130A25001317F0 /* 15 Universe Facts Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "15 Universe Facts Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D43676626130A25001317F0 /* _5_Universe_Facts_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _5_Universe_Facts_Tests.swift; sourceTree = "<group>"; };
+		5D43676626130A25001317F0 /* UniverseFactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniverseFactsTests.swift; sourceTree = "<group>"; };
 		5D43676826130A25001317F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D43676F26130DCE001317F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "15 Universe Facts Tests/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		5D43677326131914001317F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		5D43676526130A25001317F0 /* 15 Universe Facts Tests */ = {
 			isa = PBXGroup;
 			children = (
-				5D43676626130A25001317F0 /* _5_Universe_Facts_Tests.swift */,
+				5D43676626130A25001317F0 /* UniverseFactsTests.swift */,
 				5D43676826130A25001317F0 /* Info.plist */,
 			);
 			path = "15 Universe Facts Tests";
@@ -254,7 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D43676726130A25001317F0 /* _5_Universe_Facts_Tests.swift in Sources */,
+				5D43676726130A25001317F0 /* UniverseFactsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
