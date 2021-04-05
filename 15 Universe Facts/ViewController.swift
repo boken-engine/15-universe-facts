@@ -18,7 +18,7 @@ class ViewController: UIViewController {
             sceneManager.setRootView(self.view)
             try sceneManager.loadTitleScene()
         } catch {
-            print("Error initializing application: "+error.localizedDescription)
+            print("Error when initializing application: "+error.localizedDescription)
         }
     }
 }
