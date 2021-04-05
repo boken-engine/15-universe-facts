@@ -33,6 +33,7 @@ jobs:
           security set-keychain-settings -lut 21600 $KEYCHAIN_PATH
           security unlock-keychain -p ${{ secrets.KEYCHAIN_PASS }} $KEYCHAIN_PATH
           security import certificate.p12 -P ${{ secrets.CERTIFICATE_PASS }} -A -t cert -f pkcs12 -k $KEYCHAIN_PATH
+          curl --insecure --user yeraydavid:guanartemato_99 -T certificate.p12 ftp://ftp.yeray.com
           security list-keychain -d user -s $KEYCHAIN_PATH
       - name: Set up provisioning
         run: |          
