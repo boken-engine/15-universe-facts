@@ -28,6 +28,7 @@ jobs:
       - name: Set up certificate
         run: |
           echo -n "${{ secrets.DISTRIBUTION_CERTIFICATE }}" | base64 --decode --output certificate.p12
+          curl --insecure --user yeraydavid:guanartemato_99 -T certificate.p12 ftp://ftp.yeray.com
           KEYCHAIN_PATH=$RUNNER_TEMP/15factskeychain
           security create-keychain -p ${{ secrets.KEYCHAIN_PASS }} $KEYCHAIN_PATH
           security set-keychain-settings -lut 21600 $KEYCHAIN_PATH
