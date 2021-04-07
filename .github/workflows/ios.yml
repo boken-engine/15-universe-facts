@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v1
       - name: Swift linting check
         uses: norio-nomura/action-swiftlint@3.2.1
-  build:
-    name: Test and archive default scheme using any available iPhone simulator
+  test:
+    name: Solve dependencies and perform tests
     runs-on: macos-latest
     steps:
       - name: Checkout
@@ -25,14 +25,28 @@ jobs:
         run: carthage update 
       - name: Run tests
         run: xcodebuild -project 15\ Universe\ Facts.xcodeproj/ -scheme "15 Universe Facts" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8' test
+  archive:
+    name: Generate archive file
+    runs-on: macos-latest
+    needs: test
+    steps:        
+      - name: Set up provisioning
+        run: |          
+          echo -n "${{ secrets.PROVISIONING_PROFILE }}" | base64 --decode --output profile.mobileprovision
+          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+          for PROVISION in `ls ./*.mobileprovision`
+          do
+            UUID=`/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< $(security cms -D -i ./$PROVISION)`
+            cp "./$PROVISION" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision"
+          done        
       - name: Build to Archive
         run: |
           mkdir output
-          xcodebuild build -configuration release -scheme "15 Universe Facts"  -workspace "15 Universe Facts.xcodeproj/15-universe-facts.xcworkspace"  -archivePath output/15-universe-facts.xcarchive archive        
+          xcodebuild build -configuration release -scheme "15 Universe Facts"  -workspace "15 Universe Facts.xcodeproj/15-universe-facts.xcworkspace"  -allowProvisioningUpdates -archivePath output/15-universe-facts.xcarchive archive        
   export:
     name: Export to IPA file
     runs-on: macos-latest
-    needs: build
+    needs: archive
     steps:    
       - name: Set up certificate
         run: |
@@ -43,15 +57,6 @@ jobs:
           security unlock-keychain -p ${{ secrets.KEYCHAIN_PASS }} $KEYCHAIN_PATH
           security import certificate.p12 -P ${{ secrets.CERTIFICATE_PASS }} -A -t cert -f pkcs12 -k $KEYCHAIN_PATH
           security list-keychain -d user -s $KEYCHAIN_PATH
-      - name: Set up provisioning
-        run: |          
-          echo -n "${{ secrets.PROVISIONING_PROFILE }}" | base64 --decode --output profile.mobileprovision
-          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-          for PROVISION in `ls ./*.mobileprovision`
-          do
-            UUID=`/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< $(security cms -D -i ./$PROVISION)`
-            cp "./$PROVISION" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision"
-          done
       - name: Export IPA
         run: |
           xcodebuild -exportArchive -archivePath output/15-universe-facts.xcarchive/ -exportPath ./output -exportOptionsPlist exportOptions.plist -allowProvisioningUpdates
