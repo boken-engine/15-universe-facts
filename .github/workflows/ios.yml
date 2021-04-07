@@ -16,6 +16,9 @@ jobs:
   build:
     name: Build and Test default scheme using any available iPhone simulator
     runs-on: macos-latest
+    env:
+      CERTIFICATE_EXISTS: ${{ secrets.DISTRIBUTION_CERTIFICATE != '' }}
+      PROVISIONING_EXISTS: ${{ secrets.PROVISIONING_PROFILE != '' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -26,7 +29,7 @@ jobs:
       - name: Run tests
         run: xcodebuild -project 15\ Universe\ Facts.xcodeproj/ -scheme "15 Universe Facts" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8' test
       - name: Set up certificate
-        if: ${{ secrets.DISTRIBUTION_CERTIFICATE != '' }}
+        if: env.CERTIFICATE_EXISTS
         run: |
           echo -n "${{ secrets.DISTRIBUTION_CERTIFICATE }}" | base64 --decode --output certificate.p12
           KEYCHAIN_PATH=$RUNNER_TEMP/15factskeychain
@@ -36,7 +39,7 @@ jobs:
           security import certificate.p12 -P ${{ secrets.CERTIFICATE_PASS }} -A -t cert -f pkcs12 -k $KEYCHAIN_PATH
           security list-keychain -d user -s $KEYCHAIN_PATH
       - name: Set up provisioning
-        if: ${{ secrets.PROVISIONING_PROFILE != '' }}
+        if: env.PROVISIONING_EXISTS
         run: |          
           echo -n "${{ secrets.PROVISIONING_PROFILE }}" | base64 --decode --output profile.mobileprovision
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
@@ -46,12 +49,12 @@ jobs:
             cp "./$PROVISION" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision"
           done
       - name: Build to Archive
-        if: ${{ secrets.PROVISIONING_PROFILE != '' }}
+        if: env.PROVISIONING_EXISTS
         run: |
           mkdir output
           xcodebuild build -configuration release -scheme "15 Universe Facts"  -workspace "15 Universe Facts.xcodeproj/15-universe-facts.xcworkspace"  -allowProvisioningUpdates -archivePath output/15-universe-facts.xcarchive archive
       - name: Export IPA
-        if: ${{ secrets.DISTRIBUTION_CERTIFICATE != '' }}
+        if: env.CERTIFICATE_EXISTS
         run: |
           xcodebuild -exportArchive -archivePath output/15-universe-facts.xcarchive/ -exportPath ./output -exportOptionsPlist exportOptions.plist -allowProvisioningUpdates
 
