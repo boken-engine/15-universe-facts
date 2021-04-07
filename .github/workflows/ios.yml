@@ -14,7 +14,7 @@ jobs:
       - name: Swift linting check
         uses: norio-nomura/action-swiftlint@3.2.1
   build:
-    name: Build and Test default scheme using any available iPhone simulator
+    name: Test and archive default scheme using any available iPhone simulator
     runs-on: macos-latest
     steps:
       - name: Checkout
@@ -25,6 +25,15 @@ jobs:
         run: carthage update 
       - name: Run tests
         run: xcodebuild -project 15\ Universe\ Facts.xcodeproj/ -scheme "15 Universe Facts" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8' test
+      - name: Build to Archive
+        run: |
+          mkdir output
+          xcodebuild build -configuration release -scheme "15 Universe Facts"  -workspace "15 Universe Facts.xcodeproj/15-universe-facts.xcworkspace"  -allowProvisioningUpdates -archivePath output/15-universe-facts.xcarchive archive        
+  export:
+    name: Export to IPA file
+    runs-on: macos-latest
+    needs: build
+    steps:    
       - name: Set up certificate
         run: |
           echo -n "${{ secrets.DISTRIBUTION_CERTIFICATE }}" | base64 --decode --output certificate.p12
@@ -43,10 +52,6 @@ jobs:
             UUID=`/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< $(security cms -D -i ./$PROVISION)`
             cp "./$PROVISION" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision"
           done
-      - name: Build to Archive
-        run: |
-          mkdir output
-          xcodebuild build -configuration release -scheme "15 Universe Facts"  -workspace "15 Universe Facts.xcodeproj/15-universe-facts.xcworkspace"  -allowProvisioningUpdates -archivePath output/15-universe-facts.xcarchive archive
       - name: Export IPA
         run: |
           xcodebuild -exportArchive -archivePath output/15-universe-facts.xcarchive/ -exportPath ./output -exportOptionsPlist exportOptions.plist -allowProvisioningUpdates
