@@ -4,7 +4,7 @@ Go on an unforgettable discovery experience as you navigate through fascinating 
 
 A [Boken Engine](https://github.com/boken-engine/boken-engine/) powered application free to everyone.
 
-Application screenshots:
+Application screenshots: 
 
 iPad Pro:
 
